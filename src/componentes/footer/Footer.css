@@ -1,0 +1,114 @@
+.footer-boda {
+  --footer-azul: #304b69;
+  --footer-centro: #30364b;
+  --footer-bordo: #562832;
+
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--crema, #fbf6ee);
+  background:
+    radial-gradient(circle at 90% 40%, rgba(116, 45, 56, 0.28), transparent 40%),
+    linear-gradient(105deg, var(--footer-azul) 0%, var(--footer-centro) 49%, var(--footer-bordo) 100%);
+}
+
+.footer-boda__texto {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: clamp(3.5rem, 8vw, 6rem) 1rem 0;
+  text-align: center;
+}
+
+.footer-boda__antetitulo {
+  margin: 0;
+  font-family: var(--font-boton);
+  font-size: clamp(0.7rem, 1.8vw, 1.05rem);
+  font-weight: 500;
+  letter-spacing: 0.38em;
+  text-indent: 0.38em;
+  text-transform: uppercase;
+  color: var(--dorado, #d9b779);
+}
+
+.footer-boda__linea {
+  display: block;
+  width: 48px;
+  height: 1px;
+  margin: clamp(1rem, 3svh, 1.6rem) auto 0;
+  background: var(--dorado, #d9b779);
+}
+
+.footer-boda__titulo {
+  max-width: 15ch;
+  margin: clamp(0.9rem, 2svh, 1.4rem) auto 0;
+  font-family: var(--font-titulo);
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  font-weight: 400;
+  line-height: 1.08;
+  text-wrap: balance;
+  text-shadow: 0 2px 10px rgba(18, 18, 28, 0.25);
+}
+
+.footer-boda__nombres {
+  margin: clamp(1rem, 2.5svh, 1.6rem) 0 0;
+  font-family: var(--font-boton);
+  font-size: clamp(0.9rem, 2.4vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+  color: var(--dorado, #d9b779);
+}
+
+.footer-boda__ilustracion-contenedor {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
+  margin-top: clamp(1.5rem, 4vw, 3rem);
+  overflow: hidden;
+}
+
+.footer-boda__ilustracion {
+  display: block;
+  flex: none;
+  width: min(100%, 1100px);
+  height: auto;
+  transform: translateY(26px) scale(0.985);
+  opacity: 0;
+  transition: transform 1.5s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 1.5s ease;
+  will-change: transform, opacity;
+}
+
+.footer-boda--visible .footer-boda__ilustracion {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .footer-boda__texto {
+    padding-top: 3.5rem;
+  }
+
+  .footer-boda__antetitulo {
+    letter-spacing: 0.26em;
+    text-indent: 0.26em;
+  }
+
+  .footer-boda__ilustracion {
+    width: 155%;
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-boda__ilustracion,
+  .footer-boda--visible .footer-boda__ilustracion {
+    transform: none;
+    opacity: 1;
+    transition: none;
+  }
+}

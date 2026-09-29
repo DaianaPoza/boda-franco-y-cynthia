@@ -1,0 +1,56 @@
+.musica-control {
+  position: fixed;
+  z-index: 50;
+  right: calc(16px + env(safe-area-inset-right));
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-width: 52px;
+  min-height: 52px;
+  padding: 0;
+  border: 1px solid var(--dorado);
+  border-radius: 50%;
+  background: linear-gradient(120deg, #304b69, #562832);
+  color: var(--crema);
+  box-shadow: 0 5px 22px rgba(31, 26, 23, 0.32);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.musica-control:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(31, 26, 23, 0.42);
+}
+
+.musica-control:focus-visible {
+  outline: 3px solid var(--dorado);
+  outline-offset: 3px;
+}
+
+.musica-control__icono {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: var(--dorado);
+}
+
+.musica-control__texto {
+  font-family: var(--font-boton);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .musica-control {
+    right: 28px;
+    bottom: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .musica-control { transition: none; }
+}

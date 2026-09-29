@@ -1,0 +1,98 @@
+.album {
+  padding: clamp(3.5rem, 8vw, 6rem) 1.25rem;
+  background:
+    radial-gradient(circle at 88% 45%, rgba(116, 45, 56, 0.28), transparent 40%),
+    linear-gradient(105deg, #304b69 0%, #30364b 49%, #562832 100%);
+  color: var(--crema);
+  border-top: 2px solid var(--dorado);
+  text-align: center;
+}
+
+.album__contenido {
+  width: min(100%, 650px);
+  margin-inline: auto;
+}
+
+.album__titulo {
+  font-family: var(--font-boton);
+  font-size: clamp(1rem, 2.6vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-indent: 0.32em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.album__linea {
+  display: block;
+  width: 72px;
+  height: 1px;
+  margin: 1.2rem auto 1.4rem;
+  background: var(--dorado);
+}
+
+.album__camara {
+  display: block;
+  width: clamp(104px, 21vw, 136px);
+  height: auto;
+  margin: 0 auto 1.25rem;
+}
+
+.album__frase {
+  max-width: 34ch;
+  margin-inline: auto;
+  font-family: var(--font-texto);
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  line-height: 1.3;
+}
+
+.album__boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: min(100%, 260px);
+  min-height: 48px;
+  margin-top: 1.8rem;
+  padding: 0.75rem 1.6rem;
+  border: 1px solid var(--dorado);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--crema);
+  font-family: var(--font-boton);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.album__boton:hover,
+.album__boton:focus-visible {
+  background: var(--dorado);
+  color: var(--oscuro);
+  outline: 2px solid var(--dorado);
+  outline-offset: 3px;
+}
+
+.album__boton--pendiente {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.album__boton--pendiente:hover {
+  background: transparent;
+  color: var(--crema);
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .album {
+    padding-inline: 0.8rem;
+  }
+
+  .album__titulo {
+    letter-spacing: 0.16em;
+    text-indent: 0.16em;
+  }
+}

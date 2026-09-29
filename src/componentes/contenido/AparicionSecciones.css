@@ -1,0 +1,19 @@
+/* Solo las secciones preparadas por el observador reciben el efecto. */
+.contenido > .aparicion-seccion {
+  opacity: 0;
+  translate: 0 20px;
+  transition: opacity 650ms ease-out, translate 650ms ease-out;
+}
+
+.contenido > .aparicion-seccion.aparicion-seccion--visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contenido > .aparicion-seccion {
+    opacity: 1;
+    translate: none;
+    transition: none;
+  }
+}

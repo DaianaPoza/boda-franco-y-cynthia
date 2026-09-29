@@ -1,0 +1,115 @@
+.hero {
+  --hero-azul: #304b69;
+  --hero-centro: #30364b;
+  --hero-bordo: #562832;
+
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--crema);
+  background:
+    radial-gradient(circle at 90% 40%, rgba(116, 45, 56, 0.28), transparent 40%),
+    linear-gradient(105deg, var(--hero-azul) 0%, var(--hero-centro) 49%, var(--hero-bordo) 100%);
+}
+
+.hero__texto {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: clamp(2.5rem, 6vw, 4.5rem) 1rem 0;
+  text-align: center;
+}
+
+.hero__antetitulo {
+  font-family: var(--font-boton);
+  font-size: clamp(0.7rem, 1.8vw, 1.05rem);
+  font-weight: 500;
+  letter-spacing: 0.48em;
+  text-indent: 0.48em;
+  text-transform: uppercase;
+  color: var(--dorado);
+}
+
+.hero__linea {
+  display: block;
+  width: 48px;
+  height: 1px;
+  margin: clamp(1rem, 3svh, 1.6rem) auto 0;
+  background: var(--dorado);
+}
+
+.hero__nombres {
+  margin: clamp(0.8rem, 2svh, 1.4rem) auto 0;
+  padding: 0 0 0.12em;
+  font-family: var(--font-titulo);
+  font-size: clamp(2.8rem, 10.5vw, 7rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--crema);
+  text-shadow: 0 2px 10px rgba(18, 18, 28, 0.25);
+}
+
+.hero__fecha {
+  margin-top: clamp(0.5rem, 2svh, 1.3rem);
+  font-family: var(--font-boton);
+  font-size: clamp(0.95rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  color: var(--dorado);
+}
+
+.hero__ilustracion-contenedor {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
+  margin-top: clamp(1.2rem, 3vw, 2.5rem);
+  overflow: hidden;
+}
+
+.hero__ilustracion {
+  display: block;
+  flex: none;
+  width: min(100%, 1100px);
+  height: auto;
+}
+
+/* La ilustración es horizontal: se amplía y se recortan los extremos en celular. */
+@media (max-width: 600px) {
+  .hero__texto {
+    padding-top: clamp(2.4rem, 7vw, 3.2rem);
+  }
+
+  .hero__antetitulo {
+    letter-spacing: 0.34em;
+    text-indent: 0.34em;
+  }
+
+  .hero__nombres {
+    font-size: clamp(2.55rem, 10.4vw, 4.5rem);
+  }
+
+  .hero__fecha {
+    letter-spacing: 0.26em;
+    text-indent: 0.26em;
+  }
+
+  .hero__ilustracion {
+    width: 155%;
+    max-width: none;
+  }
+}
+
+@media (max-height: 680px) {
+  .hero__texto {
+    padding-top: 2.4rem;
+  }
+
+  .hero__linea {
+    margin-top: 0.8rem;
+  }
+}

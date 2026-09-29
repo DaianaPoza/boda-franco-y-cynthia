@@ -1,0 +1,11 @@
+.contenido {
+  min-height: 100dvh;
+  background: var(--crema);
+  color: var(--oscuro);
+  animation: contenidoEntrada 1s ease both;
+}
+
+@keyframes contenidoEntrada {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

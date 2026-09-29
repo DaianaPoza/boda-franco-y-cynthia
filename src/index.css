@@ -1,0 +1,33 @@
+:root {
+  --crema: #fbf6ee;
+  --dorado: #d9b779;
+  --oscuro: #1f1a17;
+  --font-titulo: 'Great Vibes', cursive;
+  --font-texto: 'Cormorant Garamond', serif;
+  --font-boton: 'Montserrat', sans-serif;
+    --crema-video: #f6f1e7;
+
+    --azul-tarjeta: #304a69;
+  --bordo-tarjeta: #4b2638;
+  --arena-tarjeta: #fbf6ee;
+  --degradado-tarjeta: linear-gradient(
+    110deg,
+    var(--azul-tarjeta) 0%,
+    #343b57 50%,
+    var(--bordo-tarjeta) 100%
+  );
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  font-family: var(--font-texto);
+  background: var(--oscuro);
+  color: var(--crema);
+  -webkit-font-smoothing: antialiased;
+}
+
+html { scroll-behavior: smooth; }
+

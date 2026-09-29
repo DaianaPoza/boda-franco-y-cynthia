@@ -1,0 +1,160 @@
+.ubicacion {
+ padding: clamp(4rem, 8vw, 6rem) 1.25rem
+           clamp(3rem, 7vw, 5.5rem);
+  color: var(--crema);
+  background:
+    radial-gradient(circle at 88% 45%, rgba(116, 45, 56, 0.28), transparent 40%),
+    linear-gradient(105deg, #304b69 0%, #30364b 49%, #562832 100%);
+  border-top: 2px solid var(--dorado);
+  text-align: center;
+}
+
+.ubicacion__contenido {
+  width: min(100%, 950px);
+  margin-inline: auto;
+}
+
+.ubicacion__titulo {
+  font-family: var(--font-boton);
+  font-size: clamp(1rem, 2.6vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-indent: 0.4em;
+  text-transform: uppercase;
+}
+
+.ubicacion__linea {
+  display: block;
+  width: 70px;
+  height: 1px;
+  margin: 1.1rem auto clamp(2rem, 5vw, 3rem);
+  background: var(--dorado);
+}
+
+.ubicacion__lugares {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ubicacion__lugar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  padding: 0 clamp(1rem, 3vw, 3rem);
+}
+
+.ubicacion__lugar + .ubicacion__lugar {
+  border-left: 1px solid rgba(217, 183, 121, 0.65);
+}
+
+.ubicacion__icono {
+  display: block;
+  width: 60px;
+  height: 48px;
+  margin-bottom: 0.7rem;
+  color: var(--dorado);
+}
+
+.ubicacion__icono svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ubicacion__tipo {
+  font-family: var(--font-boton);
+  font-size: clamp(0.88rem, 1.7vw, 1.1rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
+  text-transform: uppercase;
+}
+
+.ubicacion__hora {
+  margin-top: 0.85rem;
+  font-family: var(--font-texto);
+  font-size: clamp(1.55rem, 2.8vw, 2rem);
+  color: var(--dorado);
+}
+
+.ubicacion__nombre {
+  max-width: 25ch;
+  margin-top: 0.3rem;
+  font-family: var(--font-texto);
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height: 1.2;
+}
+
+.ubicacion__ciudad {
+  margin-top: 0.3rem;
+  font-family: var(--font-boton);
+  font-size: 0.74rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.ubicacion__boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  width: min(100%, 260px);
+  margin-top: auto;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--dorado);
+  border-radius: 999px;
+  color: var(--crema);
+  font-family: var(--font-boton);
+  font-size: 0.73rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.ubicacion__ciudad + .ubicacion__boton {
+  margin-top: 1.7rem;
+}
+
+.ubicacion__boton:hover,
+.ubicacion__boton:focus-visible {
+  background: var(--dorado);
+  color: var(--oscuro);
+  outline: none;
+}
+
+.ubicacion__boton svg {
+  width: 19px;
+  height: 19px;
+  flex: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+@media (max-width: 650px) {
+  .ubicacion__lugares {
+    grid-template-columns: 1fr;
+  }
+
+  .ubicacion__lugar {
+    padding: 0 0.5rem;
+  }
+
+  .ubicacion__lugar + .ubicacion__lugar {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-left: 0;
+    border-top: 1px solid rgba(217, 183, 121, 0.5);
+  }
+
+  .ubicacion__titulo {
+    letter-spacing: 0.28em;
+    text-indent: 0.28em;
+  }
+}

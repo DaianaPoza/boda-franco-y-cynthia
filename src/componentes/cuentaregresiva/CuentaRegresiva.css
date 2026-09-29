@@ -1,0 +1,107 @@
+.cuenta-regresiva {
+  padding: clamp(2.8rem, 6vw, 4.5rem) 1.25rem;
+  background: var(--crema);
+  color: #304b69;
+  border-top: 2px solid var(--dorado);
+  text-align: center;
+}
+
+.cuenta-regresiva__contenido {
+  width: min(100%, 960px);
+  margin-inline: auto;
+}
+
+.cuenta-regresiva__titulo {
+  margin: 0;
+  font-family: var(--font-boton);
+  font-size: clamp(1rem, 2.6vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: 0.38em;
+  text-indent: 0.38em;
+  text-transform: uppercase;
+}
+
+.cuenta-regresiva__linea {
+  display: block;
+  width: 72px;
+  height: 1px;
+  margin: 1.1rem auto 1.5rem;
+  background: var(--dorado);
+}
+
+.cuenta-regresiva__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: min(100%, 720px);
+  margin-inline: auto;
+  gap: clamp(0.5rem, 1.6vw, 1rem);
+}
+
+.cuenta-regresiva__tarjeta {
+  display: flex;
+  min-width: 0;
+  min-height: 104px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 1px solid #c8a871;
+  border-radius: 13px;
+}
+
+.cuenta-regresiva__numero {
+  font-family: var(--font-texto);
+  font-size: clamp(2.1rem, 4.5vw, 3.1rem);
+  font-weight: 400;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.cuenta-regresiva__etiqueta {
+  font-family: var(--font-boton);
+  font-size: clamp(0.65rem, 1vw, 0.75rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
+  text-transform: uppercase;
+}
+
+.cuenta-regresiva__mensaje {
+  margin-top: 1.5rem;
+  font-family: var(--font-texto);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .cuenta-regresiva {
+    padding-inline: 0.8rem;
+  }
+
+  .cuenta-regresiva__titulo {
+    font-size: clamp(0.95rem, 3.8vw, 1.25rem);
+    letter-spacing: 0.26em;
+    text-indent: 0.26em;
+  }
+
+  .cuenta-regresiva__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.35rem, 1.7vw, 0.65rem);
+  }
+
+  .cuenta-regresiva__tarjeta {
+    min-height: 78px;
+    gap: 0.3rem;
+    padding: 0.4rem 0.1rem;
+    border-radius: 9px;
+  }
+
+  .cuenta-regresiva__numero {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .cuenta-regresiva__etiqueta {
+    font-size: clamp(0.55rem, 1.75vw, 0.65rem);
+    letter-spacing: 0.06em;
+    text-indent: 0.06em;
+  }
+}
