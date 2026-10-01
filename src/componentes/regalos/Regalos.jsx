@@ -3,8 +3,8 @@ import './Regalos.css';
 
 // Completá estos valores cuando Cynthia y Franco te pasen sus datos.
 const DATOS_BANCARIOS = {
-  alias: 'perro',
-  cbu: '00000000',
+  alias: 'Boda.cyn.fran',
+  cbu: '0140460303620753332961',
 };
 
 function Regalos() {

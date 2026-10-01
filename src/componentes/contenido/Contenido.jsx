@@ -24,7 +24,7 @@ function Contenido() {
     <Regalos/>
     <Playlist/>
     <AlbumColaborativo/>
- 
+ <Confirmacion />
     <Footer/>
 
 
