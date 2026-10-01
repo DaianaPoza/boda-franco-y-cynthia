@@ -79,7 +79,7 @@
   height: auto;
   transform: translateY(26px) scale(0.985);
   opacity: 0;
-  transition: transform 2.8s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 2.8s ease;
+  transition: transform 1.5s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 1.5s ease;
   will-change: transform, opacity;
 }
 
