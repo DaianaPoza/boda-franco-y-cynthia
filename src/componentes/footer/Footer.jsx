@@ -50,8 +50,8 @@ function Footer() {
         <p className="footer-boda__antetitulo">¡Nuestra aventura continúa!</p>
         <span className="footer-boda__linea" aria-hidden="true" />
         <h2 className="footer-boda__titulo" id="footer-boda-titulo">
-          <span>Gracias por </span> <span>
-         acompañarnos </span>
+          <span>Lo que viene...</span> <span>
+         es más lindo con ustedes </span>
         </h2>
         <p className="footer-boda__nombres">{evento.nombres}</p>
       </div>

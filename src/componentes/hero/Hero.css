@@ -177,3 +177,50 @@
     font-size: 1.35rem;
   }
 }
+
+
+@keyframes hero-texto-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__antetitulo,
+.hero__linea,
+.hero__nombres,
+.hero__fecha {
+  animation: hero-texto-entrada 1.2s ease-out both;
+}
+
+.hero__antetitulo {
+  animation-delay: 0.1s;
+}
+
+.hero__linea {
+  animation-delay: 0.25s;
+}
+
+.hero__nombres {
+  animation-delay: 0.4s;
+}
+
+.hero__fecha {
+  animation-delay: 0.65s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__antetitulo,
+  .hero__linea,
+  .hero__nombres,
+  .hero__fecha {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

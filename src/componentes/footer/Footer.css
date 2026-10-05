@@ -111,7 +111,7 @@
   margin: 4.5vw 0 0;
   font-family: var(--font-titulo, cursive);
   font-size: clamp(1rem, 10.8vw, 5rem);
-  font-weight: 400;
+  font-weight: 15;
   line-height: 1.12;
   color: var(--crema, #faf6ee);
   text-shadow: 0 2px 10px rgba(18, 18, 28, 0.15);
@@ -134,7 +134,7 @@
 }
 
 
-@keyframes hero-texto-entrada {
+@keyframes footer-texto-entrada {
   from {
     opacity: 0;
     transform: translateY(12px);
@@ -146,35 +146,43 @@
   }
 }
 
-.hero__antetitulo,
-.hero__linea,
-.hero__nombres,
-.hero__fecha {
-  animation: hero-texto-entrada 1.2s ease-out both;
+.footer-boda__antetitulo,
+.footer-boda__linea,
+.footer-boda__titulo,
+.footer-boda__nombres {
+  opacity: 0;
 }
 
-.hero__antetitulo {
+.footer-boda--visible .footer-boda__antetitulo,
+.footer-boda--visible .footer-boda__linea,
+.footer-boda--visible .footer-boda__titulo,
+.footer-boda--visible .footer-boda__nombres {
+  animation: footer-texto-entrada 1.2s ease-out both;
+}
+
+.footer-boda--visible .footer-boda__antetitulo {
   animation-delay: 0.1s;
 }
 
-.hero__linea {
+.footer-boda--visible .footer-boda__linea {
   animation-delay: 0.25s;
 }
 
-.hero__nombres {
+.footer-boda--visible .footer-boda__titulo {
   animation-delay: 0.4s;
 }
 
-.hero__fecha {
+.footer-boda--visible .footer-boda__nombres {
   animation-delay: 0.65s;
 }
 
-/* Respeta la preferencia de reducir movimiento del dispositivo. */
 @media (prefers-reduced-motion: reduce) {
-  .hero__antetitulo,
-  .hero__linea,
-  .hero__nombres,
-  .hero__fecha {
+  .footer-boda .footer-boda__antetitulo,
+  .footer-boda .footer-boda__linea,
+  .footer-boda .footer-boda__titulo,
+  .footer-boda .footer-boda__nombres {
+    opacity: 1;
+    transform: none;
     animation: none;
   }
 }
