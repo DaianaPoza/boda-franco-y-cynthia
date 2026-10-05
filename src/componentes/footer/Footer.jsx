@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { evento } from '../../data/evento';
-import ilustracionFooter from '../../assets/imagen-footer.png';
+import fotoFooter from '../../assets/image-footer3.jpg';
 import './Footer.css';
 
 function Footer() {
@@ -32,21 +32,28 @@ function Footer() {
     <footer
       ref={footerRef}
       className={`footer-boda${visible ? ' footer-boda--visible' : ''}`}
+      aria-labelledby="footer-boda-titulo"
     >
-      <div className="footer-boda__texto">
-        <p className="footer-boda__antetitulo">Nuestra aventura continúa</p>
-        <span className="footer-boda__linea" aria-hidden="true" />
-        <h2 className="footer-boda__titulo">Gracias por acompañarnos</h2>
-        <p className="footer-boda__nombres">{evento.nombres}</p>
+      <div className="footer-boda__foto-contenedor">
+        <img
+          className="footer-boda__foto"
+          src={fotoFooter}
+          alt="Cynthia y Franco junto a su hijo, en un paisaje de sierras"
+          width="1200"
+          height="1600"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
 
-      <div className="footer-boda__ilustracion-contenedor">
-        <img
-          className="footer-boda__ilustracion"
-          src={ilustracionFooter}
-          alt="La pareja y su hijo caminando juntos hacia el mar"
-          loading="lazy"
-        />
+      <div className="footer-boda__texto">
+        <p className="footer-boda__antetitulo">¡Nuestra aventura continúa!</p>
+        <span className="footer-boda__linea" aria-hidden="true" />
+        <h2 className="footer-boda__titulo" id="footer-boda-titulo">
+          <span>Gracias por </span> <span>
+         acompañarnos </span>
+        </h2>
+        <p className="footer-boda__nombres">{evento.nombres}</p>
       </div>
     </footer>
   );
