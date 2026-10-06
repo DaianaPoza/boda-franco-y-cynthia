@@ -1,7 +1,7 @@
 import './Playlist.css';
 
 // Pegá aquí el enlace de invitación a la playlist colaborativa.
-const LINK_PLAYLIST = '';
+const LINK_PLAYLIST = 'https://open.spotify.com/playlist/2KS6gOX6dHn2OJ0VsX9T6h?si=H3118LIKSG6hL-SazIu-tw&utm_source=whatsapp&pt=d2f434320a9dead03b8ce1cf12f78c82&pi=DJXDWsL7QHGD1';
 
 function Playlist() {
   return (
